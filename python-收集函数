@@ -1,4 +1,4 @@
-def func(*args):
+def func(*args):    ##普通参数
     print("\t自我介绍")
     print(type(args))##自动识别参数类型打印
     for item in args:##循环打印args序列内容
