@@ -1,0 +1,24 @@
+def func(*args):
+    print("\t自我介绍")
+    print(type(args))##自动识别参数类型打印
+    for item in args:##循环打印args序列内容
+        print(item)
+func("刘小康",18,"男",178)
+def static(**kwargs):       ##收集函数
+    print("\t自我介绍")
+    print(type(kwargs))
+    print("大家好，下面有我来做一段自我介绍")
+    for k,v in kwargs.items():    ##字典使用
+        print(k,"---",v)         ##打印格式  name---刘小康
+print("what your name?",end=' ')
+name=input()
+print("how old are you?",end=' ')
+age=int(input())
+print("what your sex?",end=' ')
+sex=input()
+print("where are you from?",end=' ')
+addr=input()
+print("which your classname?",end=" ")
+classname=input()
+static(姓名=name,年龄=age,性别=sex,住址=addr,班级=classname)
+print("*"*20)
