@@ -1,0 +1,14 @@
+1.
+##globals（全局） 和locals（局部/本地）函数
+globals函数:显示所有的全局变量
+locals函数:显示所有的局部变量
+##函数用法:
+ex:
+a=100
+b=200
+def func(c,d):
+  e=300
+  print("globals={0}".format(globals()))##显示主函数所有的全局变量
+  print(f"locals={locals()}")##显示所在函数内所有的局部变量
+  print("locals={0}".format(locals()))##显示所在函数所有的局部变量
+func(100,200)
