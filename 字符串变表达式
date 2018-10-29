@@ -1,0 +1,19 @@
+1.eval函数:把一个字符串当成一个表达式来执行，并且返回表达式执行的结果
+  语法：
+    eval("string_code")
+ ex:
+ a=100
+ b=200
+ y=eval("a+b")
+ print(y)
+ 2.exec函数：同样是把字符串当成一个表达式来执行，但不返回值
+   语法：
+   exec（"string_code"）
+   ex:
+ a=100
+ b=200
+ y=exec("a+b")
+ print(y)
+ z=exec("print('a+b:'a+b)")##print可以打印出a+b的值，但不返回给z
+ print(z)##返回None  
+ 
