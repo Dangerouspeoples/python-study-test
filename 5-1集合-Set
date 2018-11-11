@@ -1,0 +1,31 @@
+1.概念
+-一堆无序的唯一的确定的数据
+-集合会自动将重复的元素过滤掉
+ex：
+  t=set()
+  print(type(t))==>class set
+  t={}
+  print(type(t))==>class dict
+  t={1,2,3}
+  print(type(t))==>class set
+  -大括号内一定要有元素在里面
+  2.特点
+  -集合内可包含元祖 for遍历集合
+  -集合内可以包含很多内容，但集合内不可嵌套集合，嵌套集合属于不可哈希内容
+  ex:
+  t={(1,2,3),("liu","xiao","kang"),("i","love")}
+  for i,j,k in t:
+      print(i,"--","j","--",k)
+ 3.集合函数
+ add函数（向集合内添加元素）
+   s={1}
+   s.add(2)
+   print(s)==>{1,2}
+ clear函数（原地清空集合内数据）
+   s={1,2,3,4,5}
+   print(id(s))
+   s.clear()
+   print(id(s))
+ remove和discard函数（移除集合内指定的值）
+  
+ 
