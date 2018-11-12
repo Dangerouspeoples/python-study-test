@@ -1,0 +1,55 @@
+1.概念
+-字典是一种组合数据，没有顺序的组合数据，数据以键值对(键：值，键：值)形式出现
+-字典的创建
+   ex:d={}
+      d=dict()
+      d={"one":1,"two":2}==>{'one':1.'two':2}
+      d=dict(one=1,two=2)==>利用关键字参数{'one':1,'two':2}
+      d=dict([("one",1),("two",2)])==>利用列表元祖{'one':1,'two':2}
+ 2.字典的特点
+ -字典是无序序列，但是没有分片和索引
+ -字典的数据是由键值对组成，即kv对
+   -key：必须是可哈希(可作为参数传进去的)的值，例如int string tuple float 但是list set dict不行
+   -value：任何值
+ 3.字典的常用操作
+    -访问(访问的是键)
+       访问格式 print(字典名=["键"])==>对应的值
+       d={"one":1,"two":2}
+       print(d["one"])==>1
+       d["one"]="eins"==>赋值
+       print(d["one"])==>eins
+4.字典的遍历
+   d={"one":1,"two":2}
+  for i in d:
+    print(k, d[k])==>d[k]对应的是d字典中键k对应的值
+  for i in d.keys():
+    print(k,d[k])
+  for v in d.values():
+     print(v)==>打印值
+  特殊用法
+  for k,v in d.items():
+     print(k'--',v)==>没有items则会报错
+5.for循环生成字典(与列表元祖用法类似)
+   d={"one":1,"two":2}
+   dd={k:v for k,v in d.items() if v%2==0}==>生成一个过滤字典
+   d=[1 ,2, 3]
+   dd=[i for i in d]
+6.字典函数
+ items：返回有键值对组成的可迭代的元祖
+ ex：
+      d={"one":1,"two":2}
+      i=d.items()
+      print(type(i))==>"dict items"
+      print(i)==>dict items([('one', 1),('two', 2)])
+get:根据键返回对应的值
+ex:
+       d={"one":1,"two":2}
+       print(d["one"])==>1
+       print(d.get("one"))==>1
+       两者差别
+       print(d["three"])==>报错KeyError
+       print(d.get("three"))==>none,none可修改
+fromkeys：指定一个序列作为字典的键，使用一个值作为所有键的值
+ex：
+      l=["xie","yang","jun"]
+      d=dict.fromkeys(l,"shazi")==>"xie":"shazi"
