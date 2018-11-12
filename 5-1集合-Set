@@ -27,5 +27,14 @@ ex：
    s.clear()
    print(id(s))
  remove和discard函数（移除集合内指定的值）
-  
+ remove直接改变原有的值，如果该值不在集合内，则报错
+ discard同样删除集合内的值 如果删除的值不在集合内 不会报错
+ 4.集合经典函数
+ intersection:交集函数
+ difference：差集函数
+ union：并集函数
+ issubset:检查集合是否为另一个子集（布尔值）
+ issuperset:检查是否为另一个超集（？）
+ 用法
+ 新集合=集合1.函数(集合2)
  
