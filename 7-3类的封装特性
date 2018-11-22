@@ -1,0 +1,14 @@
+——封装的三大特性
+公有public
+私有private
+保护protect   私有属性表示：__属性
+私有介绍
+  私有属性只能类中访问(python的私有不太严格，还是可以在外面访问，访问方式有要求)
+  ex：
+    class A():
+       name="liu"
+       __age=18
+a=class()
+print(a._A__age)==>访问了类中的私有属性age=18
+print(a.age)==>报错
+       
