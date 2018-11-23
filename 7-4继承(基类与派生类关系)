@@ -1,0 +1,47 @@
+1.-继承的特性
+  所有的类都继承自object类，所有的类都是object类的子类
+  一旦确定是继承关系，子类(派生类)可以继承除父类私有属性(成员)的所有内容
+  子类可以有自己的成员属性和方法
+  如果子类与父类成员相同，优先使用子类成员
+2.-继承的概念
+  ——一个类可以获得另一个类的成员属性和成员方法（子类可以获得父类的成员属性）
+  ——子类与父类的关系：子类拥有父类所有的属性，子类是父类的子集
+3.-继承的作用
+  ——减少代码
+-继承与被继承的关系
+  ——被继承的类叫父类，也叫基类，超类
+  ——用于继承的类叫子类，也叫派生类
+4.—继承语法
+  ex:
+  class  父类名():
+        属性
+        方法
+  class  子类名(父类名)://表示继承关系
+        pass
+  实例化对象=子类名()
+  print(实例化对象.属性)==>父类（基类）中的属性
+  print(实例化对象.方法)==>父类（基类）中的方法
+ 5. ——练习代码
+  class Person():
+    name="none"
+    _age=18#受保护成员
+    __score=0#私有成员
+    def seelp(self):
+        print("seleeping!")
+    def work(self):
+        print("make some money")
+class Tercher(Person):#代表继承person类，Person是基类(父类)，Tercher是派生类(类)
+      name="liu"
+      def make_test(self):#定义老师需要出试卷功能
+          print("attention")
+      def work(self):
+          #两个类具有相同的函数，子类想要扩充只需要调用父类函数即可
+          Person.work(self)
+          #扩充函数的另一种调用父类函数的方法2
+          super().work()
+          self.make_test()
+t=Tercher()#对象实例化
+print(t.name)#子类继承父类除私有成员的所有内容，当子类和父类具有相同属性时，子类对象优先使用子类属性
+print(t._age)
+#print(t.__score)私有成员不可以被访问
+t.work()
