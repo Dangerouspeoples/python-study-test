@@ -1,0 +1,38 @@
+from sys import argv##在sys模块中引入参数,argv可以获取用户输入的信息传入参数中
+prompt='^~^'
+script,use_name,data_time,area,file_name=argv##将自定义参数名称放入argv中，编译运行时设置自定义参数的值
+##运行方法 python 文件名.py 参数1(use_name) 参数2 参数3（script为本文件名 不需要给参数值 默认）
+print("the script is called:",script)
+print("you damo was spell in:",data_time)
+print("the damo's host is:",use_name)
+print("where you spell your damo?:",area)
+print("*"*20)
+print(f"Hi {use_name},i am the {script} script")
+print("i'd like to ask your some question")
+print("OK,the first one.")
+print(f"do you think your height was so tall")
+thinks=input(prompt)
+print(f"thinks for your answer {use_name} ")
+print("the second question")
+print(f"where did you live?")
+lives=input(prompt)
+print("what kind of computer do you have?")
+computer=input(prompt)
+print(f"""
+Alright,so you said about you height you think was {thinks},you live in {lives},
+Not sure where that is,And you have a {computer} computer.Nice
+""")
+name=input("what is your name?")
+age=input("how old are you? ")
+height=input("how tall are you?")
+weight=input("how much you weight?")
+print(f"my name is {name}.")
+print(f"i am {age} years old,and i have {height} cm tall,the last my weight is {weight} kg")
+txt=open(file_name)
+print(f"here's your file{file_name}")
+print(txt.read())
+print("Type the file_name again:")
+txt_again=input(">")
+txt_again=open(txt_again)
+print(f"the txt_again file is {txt_again}")
+print(txt_again.read())
