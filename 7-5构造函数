@@ -1,15 +1,15 @@
 1.—-构造函数的概念
    -每次实例化的时候，第一个被自动调用
    -工作时进行初始化
-   -构造函数时固定的，_init_就是构造函数，构造函数必须要有一个参数，而且第一个参数必须是self,ex：def _init_(self):
+   -构造函数时固定的，__init__(一共四个下滑线)就是构造函数，构造函数必须要有一个参数，而且第一个参数必须是self,ex：def __init__(self):
  2.代码有错，没有初始化
  class Animal():
-        def _init_(self):#构造函数，实例化对象时自动被调用
+        def __init__(self):#构造函数，实例化对象时自动被调用
             print("i an is a animal")
 
 
 class Cat(Animal):
-    def _init_(self):
+    def __init__(self):
         print("i am a Cat")
 
 class Dog(Animal):
