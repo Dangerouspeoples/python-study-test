@@ -1,0 +1,42 @@
+1.
+变量的三种常用操作
+  -读取
+  -写入
+  -删除
+案例：
+  class person():
+      def __init__(self):
+          self.name="none"
+          self.age=18
+  stu1=student()
+  print(stu1.name)==>变量的读取
+  stu1.name="liu"==>变量的写入
+  del stu1.name==>变量的删除
+2.成员描述符
+  property(fget,fset,fdel,doc)
+  #doc为一个字符串，以文本返回
+  -应用场景：除了想对变量完成普通的三种操作以外，还想进行一些其他的操作
+  案例：
+  class A():
+    def __init__(self):
+        self.name="none"
+        self.age=18
+     #fget:对类变量进行读取操作的时候应该进行的函数功能
+    def fget(self):
+        print("当下面指定变量被读取时")
+        return self.name
+     #fset：对类变量进行写入操作的时候应该进行的函数功能
+     def fset(self,name):
+        print("被写入了")
+        self.name="one"
+     #fdel:对类属性进行删除操作做的功能
+     def fdel(self):
+       pass
+     name2=property(fget,fset,fdel,"这就是成员描述符")
+   a=A()
+   print(a.name)==>none
+   print(a.name2)==>name2属性运用了成员描述符，现在是进行读取操作，自动执行fget函数功能
+                 ==>打印：当下面指定变量被读取时   none
+                 
+   
+  
