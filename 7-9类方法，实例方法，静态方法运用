@@ -1,0 +1,20 @@
+案例：
+class person:
+     #定义类方法(classmethod),类方法的第一个参数未cls
+     def eating(cls):
+         print(cls)
+         print("eating...")
+     #定义实例方法，需要实例化对象才能使用,第一个参数为self
+     def playing(self):
+        print(self)
+        print("playing...")
+     #定义静态方法(staticmethod)，直接调用,不需要参数
+     def saying():
+        print("saying..")
+ 调用方法
+ yueyue=person()
+ yueyue.playing()
+ yueyue.eating()
+ yueyue.saying()
+ person.eating()
+        
