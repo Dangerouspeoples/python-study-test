@@ -1,0 +1,26 @@
+1。结构
+/---包
+/---/---__init__.py 包的标志文件,不是函数
+/---/---模块1
+/---/---模块2
+/---/---子包
+/---/---/---__init__.py 包的标志文件
+/---/---/---子包模块1
+/---/---/---子包模块2
+2.包的导入
+
+import package_name
+使用方式：
+ package_name.func_name
+ package_name.class_name.func_name()
+   
+   
+import package.module.class.func_name()
+package.module.class.func_name()
+
+from package import module
+module.func_name()
+
+3.指定导入
+__all__=[package,class]
+当包内含有此函数时，被导入的时候将导入__all__内的东西，以外的东西不被导入
