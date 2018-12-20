@@ -1,0 +1,7 @@
+import sys
+print(sys.path)//打印文件sys读取文件路劲
+sys.path.append('文件路径')//自定义添加文件路径
+txt=open('文件名')//打开文件名给txt
+readfile=txt.read()//读取文件
+print(readfile)//打印读取文件内内容
+
